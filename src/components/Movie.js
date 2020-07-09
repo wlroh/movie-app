@@ -8,8 +8,8 @@ function Movie({ year, title, cast, poster }) {
         <img src={poster} alt={title} title={title}/>
         <div className="movie__data">
             <h3 className="movie__title">{ title }</h3>
-            <h3 className="movie__year">{ year }</h3>
-            <p className="movie__cast">{ cast }</p>
+            <h3 className="movie__year">개봉년도: { year }</h3>
+            <p className="movie__cast">출연진: { cast }</p>
         </div>
     </div>
   )
