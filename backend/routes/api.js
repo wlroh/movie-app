@@ -3,6 +3,11 @@ var router = express.Router();
 
 var axios = require("axios");
 
+const KEY = {
+  ID: "f2Lm26yvksVAlhD296kc",
+  SECRET: "ZtIMmz_Vqf",
+};
+
 /* GET users listing. */
 router.get("/", function (req, res, next) {
   res.send("respond with a resource");
@@ -15,12 +20,10 @@ router.get("/search", async function (req, res, next) {
 
 getMovies = async () => {
   let movies = [];
-  const ID_KEY = "f2Lm26yvksVAlhD296kc";
-  const SECRET_KEY = "ZtIMmz_Vqf";
   const config = {
     headers: {
-      "X-Naver-Client-Id": ID_KEY,
-      "X-Naver-Client-Secret": SECRET_KEY,
+      "X-Naver-Client-Id": KEY.ID,
+      "X-Naver-Client-Secret": KEY.SECRET,
     },
     params: {
       query: "어벤저스",
